@@ -1,7 +1,7 @@
 ---
 title: "Dataviz_Makeover"
 description: |
-  A short description of the post.
+  Data Visualization about Labor Force in Singapore.
 author:
   - name: Wu Yufeng
     url: https://example.com/norajones
@@ -10,8 +10,6 @@ output:
   distill::distill_article:
     self_contained: false
 ---
-
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
