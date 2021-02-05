@@ -18,6 +18,72 @@
  <!--radix_placeholder_import_source-->
  <!--/radix_placeholder_import_source-->
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
 
   <!--radix_placeholder_meta_tags-->
   <title>Dataviz_Makeover</title>
@@ -28,7 +94,7 @@
   <!--  https://schema.org/Article -->
   <meta property="article:published" itemprop="datePublished" content="2021-02-05"/>
   <meta property="article:created" itemprop="dateCreated" content="2021-02-05"/>
-  <meta name="article:author" content="Nora Jones"/>
+  <meta name="article:author" content="Wu Yufeng"/>
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="Dataviz_Makeover"/>
@@ -45,7 +111,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Dataviz_Makeover"]},{"type":"character","attributes":{},"value":["A short description of the post.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Nora Jones"]},{"type":"character","attributes":{},"value":["https://example.com/norajones"]}]}]},{"type":"character","attributes":{},"value":["02-05-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Dataviz_Makeover"]},{"type":"character","attributes":{},"value":["A short description of the post.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Wu Yufeng"]},{"type":"character","attributes":{},"value":["https://example.com/norajones"]}]}]},{"type":"character","attributes":{},"value":["02-05-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1388,7 +1454,7 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Dataviz_Makeover","description":"A short description of the post.","authors":[{"author":"Nora Jones","authorURL":"https://example.com/norajones","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-02-05T00:00:00.000+08:00","citationText":"Jones, 2021"}
+{"title":"Dataviz_Makeover","description":"A short description of the post.","authors":[{"author":"Wu Yufeng","authorURL":"https://example.com/norajones","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-02-05T00:00:00.000+08:00","citationText":"Yufeng, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1405,108 +1471,74 @@
 </div>
 
 <div class="d-byline">
-  Nora Jones <a href="https://example.com/norajones" class="uri">https://example.com/norajones</a> 
+  Wu Yufeng <a href="https://example.com/norajones" class="uri">https://example.com/norajones</a> 
   
 <br/>02-05-2021
 </div>
 
 <div class="d-article">
-<pre><code>&lt;font size = 8&gt;1 Critiques and Suggestion for the current visualization&lt;/font&gt;    
-The current visualization can be found at Chart 6 Resident labour force by age in MOM&#39;s Report: Labour Force in Singapore 2019 to indetify possible areas of improvement.
-![](Pictures/Current Visualization.jpg)
-&lt;font size = 6&gt;Clarity Issues&lt;/font&gt;  
-1) The current visualization analysis only uses the data of 2009 and 2019, and lacks the data of 2010-2018, so it is impossible to know the changes of each age group in these intermediate years, so it is impossible to analyze the continuous changes of the age distribution of the labor force over the years in a more specific and detailed way.  
-Suggestions: Add each year data into the visualization and see the changing trend.  
-2) The original percentage of each age group in the excel report is the percentage of the population in that age group in the labor force, so it cannot be calculated as the percentage of whole ammount of labor force.  
-Suggestions: use the original data.  
-3) The current visualization donot have Y axis. It is not clear for readers to know what exactly the chart want to show. Actually it can highlight the number of each point, which would be easy to let the reader know the difference between 2009 and 2019.  
-Suggestions: add Y axis.  
-4) The median line could not be  the specific age. It cannot calculate a median age from discrete variables.  
-Suggestions: remove the median line.  
-  
-&lt;font size = 6&gt;Aesthetics Issues&lt;/font&gt;  
-1) Title is not accurately express the chart. It seems like this chart only tell us the number of labor force of each age group.  
-Suggestions: Change the title.  
-2) Line chart does not fit this visualization, due to the X axis is age group in different intervals.  
-Suggestions: Use Bar chart.  
-3) Font size and title location. Title should be right in the middle above the chart and all the font should be in same size.  
-Suggestions: Move the title middle above the chart and change all the font into same size.  
-     
-  
-&lt;font size = 8&gt;2 Proposed design&lt;/font&gt;
-  
-      
-![](Pictures\Idea.jpg)
-  
-The first butterfly chart is going to show the difference of labor force by genders in a selected year from 2009 to 2019. The second line chart is the trend of labor force by different age groups from 2009 to 2019.
-  
-  
-&lt;font size = 8&gt;3 Proposed Data Visualization&lt;/font&gt;  
-  
-     
-Please view the interactive visualization on Tableau Public [here][1]
-
-[1]: https://public.tableau.com/profile/wu.yufeng#!/vizhome/Assign1_0_16118390838950/1 &quot;here&quot;
-
-  
-&lt;font size = 8&gt;4 Step by Step Guide&lt;/font&gt;  
-As we can see, there are three data sheets which are Males, Females and Total.  
-    
-   
-![](Pictures/OM-Data.jpg)  
-![](Pictures/OFM-Data.jpg)  
-![](Pictures/OT-Data.jpg)  
-In order to make the data more conducive to the subsequent visualization operations, we processed the original data in Excel, and the processed data is shown in the following figure.
-![](Pictures/Total Data.jpg)  
-![](Pictures/Gender Data.jpg)  
-Then Import the data into Tableau
-![](Pictures/Importing Data.jpg)
-&lt;font size = 6&gt;Butterfly Chart--% Labor Force of Different Age Group by Gender in &lt;Year1&gt;&lt;/font&gt;  
-&lt;font size = 5&gt;1) Create calculated fields&lt;/font&gt;
-![](Pictures/Create CF-1.png)  
-![](Pictures/Create CF-2.png)  
-![](Pictures/Create CF-3.png)  
-![](Pictures/Create CF-4.png)  
-2) Build the chart
-![](Pictures/Build chart-1.png)  
-![](Pictures/Chart-1.png)  
-Then make X axis reversed and hide the Y axis.  
-![](Pictures/Reverse.jpg)  
-![](Pictures/unshow header.png)
-After that, drag the Gender1 and drop into color under Males and Females.  
-![](Pictures/Colour Female.png)  
-![](Pictures/Colour Male.png)  
- And now the chart would be like this  
- ![](Pictures/Chart-2.jpg)
-Then change the 0 axis type into text and drag the Age1 into Text.  
-![](Pictures/0 axis.jpg)  
-Now, drag the Year1 into filter, select all and show the filter. Make the filter single value.  
-![](Pictures/Year filter.png)  
-![](Pictures/Single Value.png)  
-For the title, remember to insert Year1.  
-![](Pictures/Title-1.jpg)  
-
-Finally, show mark lables for both gender and the chart is finished. 
-![](Pictures/Labels.jpg) 
-![](Pictures/Chart-3.jpg)  
-Line chart-Labor Force Trend by Age Group from 2009 to 2019
-![](Pictures/Line Chart-01.jpg)  
-
-![](Pictures/Line Chart-02.jpg)
-
-![](Pictures/Line Chart-03.jpg)    
-Finally, the chart is finished and shows like this.  
-![](Pictures/Line Chart.jpg)  
-&lt;font size = 8&gt;5 Insights&lt;/font&gt;  
-1) Percentage of labor force in females decreased from 30 while from 44 for males.  
-2) Percentage of labor force in males are almost same in the 30 years from 25 to 55.  
-3) The increased percentage of labor force above 55 is obviously higher than other age group.  
-Distill is a publication format for scientific and technical writing, native to the web.
-
-Learn more about using Distill at &lt;https://rstudio.github.io/distill&gt;.
-
-
-```{.r .distill-force-highlighting-css}</code></pre>
+<p><font size = 8>1 Critiques and Suggestion for the current visualization</font><br />
+The current visualization can be found at Chart 6 Resident labour force by age in MOM’s Report: Labour Force in Singapore 2019 to indetify possible areas of improvement. <img src="Pictures/Current%20Visualization.jpg" /> <font size = 6>Clarity Issues</font><br />
+1) The current visualization analysis only uses the data of 2009 and 2019, and lacks the data of 2010-2018, so it is impossible to know the changes of each age group in these intermediate years, so it is impossible to analyze the continuous changes of the age distribution of the labor force over the years in a more specific and detailed way.<br />
+Suggestions: Add each year data into the visualization and see the changing trend.<br />
+2) The original percentage of each age group in the excel report is the percentage of the population in that age group in the labor force, so it cannot be calculated as the percentage of whole ammount of labor force.<br />
+Suggestions: use the original data.<br />
+3) The current visualization donot have Y axis. It is not clear for readers to know what exactly the chart want to show. Actually it can highlight the number of each point, which would be easy to let the reader know the difference between 2009 and 2019.<br />
+Suggestions: add Y axis.<br />
+4) The median line could not be the specific age. It cannot calculate a median age from discrete variables.<br />
+Suggestions: remove the median line.</p>
+<p><font size = 6>Aesthetics Issues</font><br />
+1) Title is not accurately express the chart. It seems like this chart only tell us the number of labor force of each age group.<br />
+Suggestions: Change the title.<br />
+2) Line chart does not fit this visualization, due to the X axis is age group in different intervals.<br />
+Suggestions: Use Bar chart.<br />
+3) Font size and title location. Title should be right in the middle above the chart and all the font should be in same size.<br />
+Suggestions: Move the title middle above the chart and change all the font into same size.</p>
+<p><font size = 8>2 Proposed design</font></p>
+<p><img src="Pictures/Idea.jpg" /></p>
+<p>The first butterfly chart is going to show the difference of labor force by genders in a selected year from 2009 to 2019. The second line chart is the trend of labor force by different age groups from 2009 to 2019.</p>
+<p><font size = 8>3 Proposed Data Visualization</font></p>
+<p>Please view the interactive visualization on Tableau Public <a href="https://public.tableau.com/profile/wu.yufeng#!/vizhome/Assign1_0_16118390838950/1" title="here">here</a></p>
+<p><font size = 8>4 Step by Step Guide</font><br />
+As we can see, there are three data sheets which are Males, Females and Total.</p>
+<p><img src="Pictures/OM-Data.jpg" /><br />
+<img src="Pictures/OFM-Data.jpg" /><br />
+<img src="Pictures/OT-Data.jpg" /><br />
+In order to make the data more conducive to the subsequent visualization operations, we processed the original data in Excel, and the processed data is shown in the following figure. <img src="Pictures/Total%20Data.jpg" /><br />
+<img src="Pictures/Gender%20Data.jpg" /><br />
+Then Import the data into Tableau <img src="Pictures/Importing%20Data.jpg" /> <font size = 6>Butterfly Chart–% Labor Force of Different Age Group by Gender in <Year1></font><br />
+<font size = 5>1) Create calculated fields</font> <img src="Pictures/Create%20CF-1.png" /><br />
+<img src="Pictures/Create%20CF-2.png" /><br />
+<img src="Pictures/Create%20CF-3.png" /><br />
+<img src="Pictures/Create%20CF-4.png" /><br />
+2) Build the chart <img src="Pictures/Build%20chart-1.png" /><br />
+<img src="Pictures/Chart-1.png" /><br />
+Then make X axis reversed and hide the Y axis.<br />
+<img src="Pictures/Reverse.jpg" /><br />
+<img src="Pictures/unshow%20header.png" /> After that, drag the Gender1 and drop into color under Males and Females.<br />
+<img src="Pictures/Colour%20Female.png" /><br />
+<img src="Pictures/Colour%20Male.png" /><br />
+And now the chart would be like this<br />
+<img src="Pictures/Chart-2.jpg" /> Then change the 0 axis type into text and drag the Age1 into Text.<br />
+<img src="Pictures/0%20axis.jpg" /><br />
+Now, drag the Year1 into filter, select all and show the filter. Make the filter single value.<br />
+<img src="Pictures/Year%20filter.png" /><br />
+<img src="Pictures/Single%20Value.png" /><br />
+For the title, remember to insert Year1.<br />
+<img src="Pictures/Title-1.jpg" /></p>
+<p>Finally, show mark lables for both gender and the chart is finished. <img src="Pictures/Labels.jpg" /> <img src="Pictures/Chart-3.jpg" /><br />
+Line chart-Labor Force Trend by Age Group from 2009 to 2019 <img src="Pictures/Line%20Chart-01.jpg" /></p>
+<p><img src="Pictures/Line%20Chart-02.jpg" /></p>
+<p><img src="Pictures/Line%20Chart-03.jpg" /><br />
+Finally, the chart is finished and shows like this.<br />
+<img src="Pictures/Line%20Chart.jpg" /><br />
+<font size = 8>5 Insights</font><br />
+1) Percentage of labor force in females decreased from 30 while from 44 for males.<br />
+2) Percentage of labor force in males are almost same in the 30 years from 25 to 55.<br />
+3) The increased percentage of labor force above 55 is obviously higher than other age group.<br />
+Distill is a publication format for scientific and technical writing, native to the web.</p>
+<p>Learn more about using Distill at <a href="https://rstudio.github.io/distill" class="uri">https://rstudio.github.io/distill</a>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
