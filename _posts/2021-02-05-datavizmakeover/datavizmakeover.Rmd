@@ -1,0 +1,113 @@
+---
+title: "Dataviz_Makeover"
+description: |
+  A short description of the post.
+author:
+  - name: Nora Jones
+    url: https://example.com/norajones
+date: 02-05-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+```
+<font size = 8>1 Critiques and Suggestion for the current visualization</font>    
+The current visualization can be found at Chart 6 Resident labour force by age in MOM's Report: Labour Force in Singapore 2019 to indetify possible areas of improvement.
+![](Pictures/Current Visualization.jpg)
+<font size = 6>Clarity Issues</font>  
+1) The current visualization analysis only uses the data of 2009 and 2019, and lacks the data of 2010-2018, so it is impossible to know the changes of each age group in these intermediate years, so it is impossible to analyze the continuous changes of the age distribution of the labor force over the years in a more specific and detailed way.  
+Suggestions: Add each year data into the visualization and see the changing trend.  
+2) The original percentage of each age group in the excel report is the percentage of the population in that age group in the labor force, so it cannot be calculated as the percentage of whole ammount of labor force.  
+Suggestions: use the original data.  
+3) The current visualization donot have Y axis. It is not clear for readers to know what exactly the chart want to show. Actually it can highlight the number of each point, which would be easy to let the reader know the difference between 2009 and 2019.  
+Suggestions: add Y axis.  
+4) The median line could not be  the specific age. It cannot calculate a median age from discrete variables.  
+Suggestions: remove the median line.  
+  
+<font size = 6>Aesthetics Issues</font>  
+1) Title is not accurately express the chart. It seems like this chart only tell us the number of labor force of each age group.  
+Suggestions: Change the title.  
+2) Line chart does not fit this visualization, due to the X axis is age group in different intervals.  
+Suggestions: Use Bar chart.  
+3) Font size and title location. Title should be right in the middle above the chart and all the font should be in same size.  
+Suggestions: Move the title middle above the chart and change all the font into same size.  
+     
+  
+<font size = 8>2 Proposed design</font>
+  
+      
+![](Pictures\Idea.jpg)
+  
+The first butterfly chart is going to show the difference of labor force by genders in a selected year from 2009 to 2019. The second line chart is the trend of labor force by different age groups from 2009 to 2019.
+  
+  
+<font size = 8>3 Proposed Data Visualization</font>  
+  
+     
+Please view the interactive visualization on Tableau Public [here][1]
+
+[1]: https://public.tableau.com/profile/wu.yufeng#!/vizhome/Assign1_0_16118390838950/1 "here"
+
+  
+<font size = 8>4 Step by Step Guide</font>  
+As we can see, there are three data sheets which are Males, Females and Total.  
+    
+   
+![](Pictures/OM-Data.jpg)  
+![](Pictures/OFM-Data.jpg)  
+![](Pictures/OT-Data.jpg)  
+In order to make the data more conducive to the subsequent visualization operations, we processed the original data in Excel, and the processed data is shown in the following figure.
+![](Pictures/Total Data.jpg)  
+![](Pictures/Gender Data.jpg)  
+Then Import the data into Tableau
+![](Pictures/Importing Data.jpg)
+<font size = 6>Butterfly Chart--% Labor Force of Different Age Group by Gender in <Year1></font>  
+<font size = 5>1) Create calculated fields</font>
+![](Pictures/Create CF-1.png)  
+![](Pictures/Create CF-2.png)  
+![](Pictures/Create CF-3.png)  
+![](Pictures/Create CF-4.png)  
+2) Build the chart
+![](Pictures/Build chart-1.png)  
+![](Pictures/Chart-1.png)  
+Then make X axis reversed and hide the Y axis.  
+![](Pictures/Reverse.jpg)  
+![](Pictures/unshow header.png)
+After that, drag the Gender1 and drop into color under Males and Females.  
+![](Pictures/Colour Female.png)  
+![](Pictures/Colour Male.png)  
+ And now the chart would be like this  
+ ![](Pictures/Chart-2.jpg)
+Then change the 0 axis type into text and drag the Age1 into Text.  
+![](Pictures/0 axis.jpg)  
+Now, drag the Year1 into filter, select all and show the filter. Make the filter single value.  
+![](Pictures/Year filter.png)  
+![](Pictures/Single Value.png)  
+For the title, remember to insert Year1.  
+![](Pictures/Title-1.jpg)  
+
+Finally, show mark lables for both gender and the chart is finished. 
+![](Pictures/Labels.jpg) 
+![](Pictures/Chart-3.jpg)  
+Line chart-Labor Force Trend by Age Group from 2009 to 2019
+![](Pictures/Line Chart-01.jpg)  
+
+![](Pictures/Line Chart-02.jpg)
+
+![](Pictures/Line Chart-03.jpg)    
+Finally, the chart is finished and shows like this.  
+![](Pictures/Line Chart.jpg)  
+<font size = 8>5 Insights</font>  
+1) Percentage of labor force in females decreased from 30 while from 44 for males.  
+2) Percentage of labor force in males are almost same in the 30 years from 25 to 55.  
+3) The increased percentage of labor force above 55 is obviously higher than other age group.  
+Distill is a publication format for scientific and technical writing, native to the web.
+
+Learn more about using Distill at <https://rstudio.github.io/distill>.
+
+
