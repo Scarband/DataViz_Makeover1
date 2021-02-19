@@ -17,6 +17,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 <font size = 8> Critiques and Suggestions </font>  
+  
 ![](Picture-02/30.jpg )  
 
 <font size = 6> Clarity </font>   
