@@ -16,8 +16,8 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-<font size = 8> Critiques and Suggestions </font> 
-![](Picture-02/30.jpg)
+<font size = 8> Critiques and Suggestions </font>  
+![](Picture-02/30.jpg )  
 
 <font size = 6> Clarity </font>   
 1) it is difficult to see the proportion of people holding a supportive attitude in each country. In this figure, the proportion of people holding a supportive attitude of more than 3 is higher than that in other countries. The reason is that the red part (indicating 3) of each bar is in a different location and is difficult to compare due to the different starting points. To fix this, I'll use a Gantt Chart to fix it later, since it allows all neutral parts to be in the same position.  
