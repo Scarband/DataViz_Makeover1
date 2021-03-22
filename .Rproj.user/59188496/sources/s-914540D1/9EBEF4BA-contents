@@ -13,7 +13,6 @@ output:
 <font size = 8>1 Critiques and Suggestion </font>  
 
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
@@ -54,7 +53,7 @@ The proposed design improves on the original design on the following areas:
 <font size = 8>1 Data Preparation </font>   
 1.  <font size = 5> Data Import <font>  
 After downloading all the files we neeed and put them in the same folder, drag one into Tableau. And we can see all the csv below the files list. Then click on New Union move all the csv into new union. 
-
+knion
 ![](Picture-02/01.jpg)
 2.  <font size = 5> Data cleaning <font>  
 Rename "Table Name" to "Country", then hide all the columns except "Country", "Age", "Gender", "Household_size", "vac1", "vac2_1", "vac2_2", "vac2_3", "vac2_6" and "vac3". Then privot the six questions and rename them.
