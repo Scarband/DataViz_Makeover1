@@ -1,7 +1,7 @@
 ---
 title: "Armed Conflict in SouthEast Asia"
 description: |
-  A short description of the post.
+  Visualization about the conflicts in SouthEast Asia
 author:
   - name: WU YUFENG
     url: https://example.com/norajones
@@ -23,25 +23,25 @@ knitr::opts_chunk$set(echo = FALSE)
 knitr::include_graphics('Pictures/01.jpg')
 ```
   
-<font size = 6>1.1 Clarity </font>  
+<font size = 6>2.1 Clarity </font>  
 In this segment, we will explore ways we can improve the visual clarity of this visualisation.  
-1.1.1 No introduction about the visualization  
+2.1.1 No introduction about the visualization  
   There is no lead-in paragraph in this visualization, which means nothing can help reader to    understand what exactly the chart express,
-1.1.2 Dense and small dots  
+2.1.2 Dense and small dots  
   Due to the points on the map overlap each other (highlighted below), the map does not clearly show the frequency of events in each region.  
-1.1.3 Synchronised y-axis lable  
+2.1.3 Synchronised y-axis lable  
   The scale of the y-axis of these charts are not synchronised under different event. Besides, the y-axis tick marks are of varying scale for Armed Conflict Event by Type. Should the user miss to notice this, the user will be comparing the event counts and trends incorrectly.  
-1.1.4 No country name  
+2.1.4 No country name  
   There is no country name on the map which would make reader confused with the conflict location.  
-1.1.5 Toolip information not enough  
+2.1.5 Toolip information not enough  
   The toolip information could include more useful information such as 'notes', 'Event date'.  
   
 <font size = 6>1.2 Asethetics </font>  
-1.2.1 Single Filter   
+2.2.1 Single Filter   
   Reader could not get enough information or comparison between countries or different years due to the limit of the single filter.   
-1.2.2 Single color in different event types   
+2.2.2 Single color in different event types   
   The line chart should be colored accordingly by Event Type for consistency. There are different colors of Event Type in map, it should be same in line chart.   
-1.2.3 No indication of data source  
+2.2.3 No indication of data source  
   There is no indication of data source in the map and chart.
   
 <font size = 8>3 Proposed Design </font>  
@@ -51,10 +51,10 @@ knitr::include_graphics('Pictures/02.jpg')
 ```
   
 <font size = 6> Improvements </font>   
-2.1 Add some useful information into toolip like 'Notes', ' Event date', 'Fatalities'.  
-2.2 Make three maps from conflict status, fatalities status and geolocoation aspect, which will give reader basic knowledge of conlicts condition in SouthEast Asia.  
-2.3 For better visualization, map and chart will use same color for different event types.  
-2.4 Three filters 'Year', 'Event Type', 'Country' give reader free space to choose what they want to analysis.
+3.1 Add some useful information into toolip like 'Notes', ' Event date', 'Fatalities'.  
+3.2 Make three maps from conflict status, fatalities status and geolocoation aspect, which will give reader basic knowledge of conlicts condition in SouthEast Asia.  
+3.3 For better visualization, map and chart will use same color for different event types.  
+3.4 Three filters 'Year', 'Event Type', 'Country' give reader free space to choose what they want to analysis.
 
 <font size = 8>4 Step-by-step Description </font>  
 <font size = 6>4.1 Data Preparation </font>  
