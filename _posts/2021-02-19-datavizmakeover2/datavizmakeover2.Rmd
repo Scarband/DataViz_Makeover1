@@ -10,6 +10,8 @@ output:
   distill::distill_article:
     self_contained: false
 ---
+<font size = 8>1 Critiques and Suggestion </font>  
+
 
 
 ```{r setup, include=FALSE}
