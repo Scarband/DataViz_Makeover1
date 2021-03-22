@@ -13,7 +13,6 @@ output:
 <font size = 8>1 Critiques and Suggestion </font>  
 
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
