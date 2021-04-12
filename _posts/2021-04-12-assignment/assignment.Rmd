@@ -1,0 +1,143 @@
+---
+title: "Assignment"
+author:
+  - name: WU YUFENG
+    url: https://example.com/norajones
+date: 04-12-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+### 1 Overview
+    All along, the research on the influencing factors of student achievement is a very hot research topic. Due to the complexity of students' information, the uncertainty of school and family influencing factors, and the difference of different subjects, it is difficult to quantitatively analyze the influencing factors of students' performance.  
+    
+### 2 Research Method
+#### 2.1 Decision Tree
+         A decision tree is a decision support tool that uses a tree-like model of decisions and their possible consequences, including chance event outcomes, resource costs, and utility. It is one way to display an algorithm that only contains conditional control statements.
+         Decision trees are commonly used in operations research, specifically in decision analysis, to help identify a strategy most likely to reach a goal, but are also a popular tool in machine learning.
+#### 2.2 Logistic Regression
+         Logistic regression is a statistical model that in its basic form uses a logistic function to model a binary dependent variable, although many more complex extensions exist. In regression analysis, logistic regression (or logit regression) is estimating the parameters of a logistic model (a form of binary regression). Mathematically, a binary logistic model has a dependent variable with two possible values, such as pass/fail which is represented by an indicator variable, where the two values are labeled "0" and "1". In the logistic model, the log-odds (the logarithm of the odds) for the value labeled "1" is a linear combination of one or more independent variables ("predictors"); the independent variables can each be a binary variable (two classes, coded by an indicator variable) or a continuous variable (any real value). The corresponding probability of the value labeled "1" can vary between 0 (certainly the value "0") and 1 (certainly the value "1"), hence the labeling; the function that converts log-odds to probability is the logistic function, hence the name. The unit of measurement for the log-odds scale is called a logit, from logistic unit, hence the alternative names. Analogous models with a different sigmoid function instead of the logistic function can also be used, such as the probit model; the defining characteristic of the logistic model is that increasing one of the independent variables multiplicatively scales the odds of the given outcome at a constant rate, with each independent variable having its own parameter; for a binary dependent variable this generalizes the odds ratio.
+
+### 3 Step by Step Visualization
+#### 3.1 Install and load R packages
+         1) 'party' contains 'ctree' which can help us draw the decision tree. 
+         2) 'corrplot' can help us make correlation analysis between the variables.
+         3) 'Rcpp' contains 'glm' which can help make logistic regression.
+         4) 'Psych' contains 'corr.test' which can help us get the probability values of multiple values.
+         
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+packages = c('readr', 'dplyr', 'tidyverse', 'plyr','party','corrplot','Rcpp','psych')
+for(p in packages){
+  if(!require(p,character.only = T)){
+    install.packages(p)
+  }
+  library(p,character.only = T)
+}
+```
+
+#### 3.2 load the data
+
+```{r echo=TRUE}
+data  <- read.csv('data/student-mat.csv')
+```
+
+#### 3.3 Data Wrangling
+##### 3.3.1 Change Data Type 
+         Before make decision tree analysis or logistic analysis, we need to make correlation analysis to select the variables which has actual influence on students grade.
+         To make correlation analysis, we need to change some vatiables type to numeric and remove some useless variables.
+         
+```{r echo=TRUE}
+data$Grade <- NA
+data$Schoolsup <- NA
+data$Famsup <- NA
+data$Paid <- NA
+data$Activities <- NA
+data$Nursery <- NA
+data$Higher <- NA
+data$Internet <- NA
+data$Romantic <- NA
+data$Gender <- NA
+data$Grade <- ifelse(data$G3>15,4,ifelse(data$G3>10,3,ifelse(data$G3>5,2,1)))
+
+data$Schoolsup <- ifelse(data$schoolsup == 'yes', 1, 0)
+
+data$Famsup <- ifelse(data$famsup == 'yes', 1 , 0)
+
+data$Famsup <- ifelse(data$famsup == 'yes', 1 , 0)
+
+data$Paid <- ifelse(data$paid == 'yes',1,0)
+
+data$Activities <- ifelse(data$activities =='yes',1,0)
+
+data$Nursery <- ifelse(data$nursery =='yes',1,0)
+
+data$Higher <- ifelse(data$higher == 'yes',1,0)
+
+data$Internet <- ifelse(data$internet =='yes',1,0)
+
+data$Romantic <- ifelse(data$romantic == 'yes',1,0)
+
+data$Gender <- ifelse(data$sex == 'F',1,0)
+
+data = data[,-c(1:12)]
+
+data= data[,-c(4:11)]
+data =data[,-c(11:13)]
+str(data)
+```
+##### 3.3.2 Correlation Analysis
+
+```{r echo=TRUE}
+a <- cor(data)
+corrplot(a)
+
+```
+        As we can in the correlation plot, there are several variables like 'travetime', 'studytime'.. which has high correlation with grade. However, we still need to check the probability values to see if the result is significant.
+
+```{r echo=TRUE}
+   corr.test(data, use = 'complete')
+```
+
+       when set the alpha as 0.05, we can only choose 'traveltime', 'studytime', 'failures', 'goout' and 'Walc' to see their influence on students grade.
+
+#### 3.3 Decision Tree
+
+```{r echo=TRUE}
+tree <- ctree(Grade~ traveltime + studytime + failures  + Walc  + goout,
+              data = data)
+plot(tree)
+```
+       From the tree above we can see, only 'failures' and 'goout' are used to divide the students into four groups. Students who has no failures obviously have higher grade, especially those who go out less. Those who has more than 1 failures have the lowest grade.
+       
+       
+       
+#### 3.4 Logistice regression
+         To make logistic regression we need to change the response variable ' Grade' into factor type.
+```{r echo=TRUE}
+data$Grade <- factor(data$Grade)
+```
+
+         Then use glm() function to build the formula and make the analysis.  
+         
+```{r echo=TRUE}
+mylogit <- glm(formula = Grade ~ traveltime + studytime + failures  + Walc  + goout,data = data, family = binomial)
+print(summary(mylogit))
+
+```
+
+       The result shows that for each additional failure point, the student grade will reduce 0.8716 and for each additional Walc, the students grade will increase by 0.3447 under alpha equals to 0.05.
+
+### 4 Conclusion
+      Compared with logistic regression model, the result of decision tree model is more visual. Let the reader reflect the classification of results in the first place. B
+      Both of the two models show that failures is the major influence factor on student grade, which admonish student to concentrate on theri studies!
+
+
+
